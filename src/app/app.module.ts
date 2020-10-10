@@ -14,6 +14,7 @@ import { CatalogoFormapagoComponent } from './components/formapago/catalogo-form
 import { FormaPagoService } from './components/formapago/FormaPagoService.service';
 import { MainComponent } from './components/main/main.component';
 import { CatalogoMovimientoscajaComponent } from './components/movimientoscaja/catalogo-movimientoscaja/catalogo-movimientoscaja.component';
+import { CuentasxcobrarComponent } from './components/ventas/cuentasxcobrar/cuentasxcobrar.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { CatalogoMovimientoscajaComponent } from './components/movimientoscaja/c
     CatalogoVendedorComponent,
     CatalogoFormapagoComponent,
     MainComponent,
-    CatalogoMovimientoscajaComponent
+    CatalogoMovimientoscajaComponent,
+    CuentasxcobrarComponent
   ],
   imports: [
     BrowserModule,
