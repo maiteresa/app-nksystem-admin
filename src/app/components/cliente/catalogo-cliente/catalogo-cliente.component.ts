@@ -13,7 +13,14 @@ export class CatalogoClienteComponent implements OnInit {
   titulo = 'Listado de Clientes';
   lstClientes: Cliente[] = [];
 
+  POSTS: any;
+  page = 1;
+  count = 0;
+  tableSize = 10;
+  tableSizes = [3, 6, 9, 12];
+  
   constructor(private clienteServicio: ClienteService) { }
+
 
   ngOnInit(): void {
     this.listarClientes();
@@ -28,5 +35,15 @@ export class CatalogoClienteComponent implements OnInit {
      this.loading = false;
    });
  }
+ onTableDataChange(event){
+  this.page = event;
+  this.lstClientes;
+}  
+
+onTableSizeChange(event): void {
+  this.tableSize = event.target.value;
+  this.page = 1;
+  this.lstClientes;
+} 
 
 }

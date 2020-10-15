@@ -19,9 +19,9 @@
                                 <div class="col-lg-6">
                                     <div class="breadcome-heading">
                                         <form role="search" class="">
-                    <input type="text" placeholder="Search..." class="form-control">
-                    <a href=""><i class="fa fa-search"></i></a>
-                  </form>
+                                            <a href=""><i class="fa fa-pencil"></i></a>
+                                            <button class="form-control">Registrar Cliente</button>                                            
+                                        </form>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
@@ -58,6 +58,13 @@
                             </div>
                         </div>
                         <div class="sparkline8-graph">
+                            <div class="breadcome-heading">
+                                <form role="search" class="">
+                                    <input type="text" placeholder="Buscar..." class="form-control">
+                                    <a href=""><i class="fa fa-search"></i></a>
+                                </form>
+                            </div>
+                            <br>
                           <div class="static-table-list">
                               <table class="table">
                                     <thead>
@@ -73,7 +80,11 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr *ngFor="let cliente of lstClientes">
+                                        <tr *ngFor="let cliente of lstClientes | paginate : {
+                                            itemsPerPage: tableSize,
+                                            currentPage: page,
+                                            totalItems: count
+                                          };">
                                             <td></td>
                                             <td>{{cliente.rif}}</td>
                                             <td>{{cliente.nombre}}</td>
@@ -91,7 +102,11 @@
                                         </tr>
                                     </tbody>
                                 </table>
-
+                                <br>
+                                <div class="login-submit-cs">
+                                    <pagination-controls responsive="true" previousLabel="" nextLabel="" (pageChange)="onTableDataChange($event)">
+                                    </pagination-controls>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -101,4 +116,6 @@
     </div>
 </div>
 <!-- Static Table End -->
+
+
 

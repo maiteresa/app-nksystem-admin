@@ -15,6 +15,15 @@ import { FormaPagoService } from './components/formapago/FormaPagoService.servic
 import { MainComponent } from './components/main/main.component';
 import { CatalogoMovimientoscajaComponent } from './components/movimientoscaja/catalogo-movimientoscaja/catalogo-movimientoscaja.component';
 import { CuentasxcobrarComponent } from './components/ventas/cuentasxcobrar/cuentasxcobrar.component';
+import { CatalogoProveedorComponent } from './components/proveedor/catalogo-proveedor/catalogo-proveedor.component';
+import { ProveedorService } from './components/proveedor/ProveedorService.service';
+import { CatalogoFacturaComponent } from './components/factura/catalogo-factura/catalogo-factura.component';
+import { FacturaService } from './components/factura/FacturaService.service';
+import { MovimientosCajaService } from './components/movimientoscaja/MovimientosCajaService.service';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { CatalogoArticuloComponent } from './components/articulo/catalogo-articulo/catalogo-articulo.component';
+import { ArticuloService } from './components/articulo/ArticuloService.service';
+import { CatalogoUsuarioComponent } from './components/configuracion/catalogo-usuario/catalogo-usuario.component';
 
 @NgModule({
   declarations: [
@@ -26,14 +35,19 @@ import { CuentasxcobrarComponent } from './components/ventas/cuentasxcobrar/cuen
     CatalogoFormapagoComponent,
     MainComponent,
     CatalogoMovimientoscajaComponent,
-    CuentasxcobrarComponent
+    CuentasxcobrarComponent,
+    CatalogoProveedorComponent,
+    CatalogoFacturaComponent,
+    CatalogoArticuloComponent,
+    CatalogoUsuarioComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxPaginationModule
   ],
-  providers: [ClienteService,VendedorService,FormaPagoService],
+  providers: [ClienteService,VendedorService,FormaPagoService,ProveedorService,FacturaService,MovimientosCajaService,ArticuloService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

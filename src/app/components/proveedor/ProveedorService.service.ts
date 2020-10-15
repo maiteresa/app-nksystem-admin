@@ -1,26 +1,25 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Api } from 'src/app/config';
-import { Cliente } from '../model/Cliente.model';
-import { MovimientosCaja } from '../model/MovimientosCaja.model';
+import { Proveedor } from '../model/Proveedor.model';
 
 
 @Injectable()
-export class MovimientosCajaService{
+export class ProveedorService{
 
-  lstMovimientosCajas: MovimientosCaja[] = [];
+  lstProveedores: Proveedor[] = [];
   uriapi: string = Api.url;
 
   constructor(private httpClient: HttpClient){
 
   }
 
-  listarMovimientosCajas(codnegocio: string){
+  listarProveedores(codnegocio: string){
     const body = {
 
     };
     const httpHeaders = new HttpHeaders().set('Content-Type', 'application/json');
-    const endpoint: any = this.uriapi + 'api/movimientoscaja';
+    const endpoint: any = this.uriapi + 'api/proveedor';
     return this.httpClient.get(endpoint, {headers: httpHeaders});
   }
 
