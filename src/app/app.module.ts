@@ -24,6 +24,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { CatalogoArticuloComponent } from './components/articulo/catalogo-articulo/catalogo-articulo.component';
 import { ArticuloService } from './components/articulo/ArticuloService.service';
 import { CatalogoUsuarioComponent } from './components/configuracion/catalogo-usuario/catalogo-usuario.component';
+import { CrearArticuloComponent } from './components/articulo/crear-articulo/crear-articulo.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { CatalogoUsuarioComponent } from './components/configuracion/catalogo-us
     CatalogoProveedorComponent,
     CatalogoFacturaComponent,
     CatalogoArticuloComponent,
-    CatalogoUsuarioComponent
+    CatalogoUsuarioComponent,
+    CrearArticuloComponent
   ],
   imports: [
     BrowserModule,

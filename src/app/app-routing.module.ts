@@ -10,6 +10,7 @@ import { CatalogoFacturaComponent } from './components/factura/catalogo-factura/
 import { CatalogoMovimientoscajaComponent } from './components/movimientoscaja/catalogo-movimientoscaja/catalogo-movimientoscaja.component';
 import { CatalogoArticuloComponent } from './components/articulo/catalogo-articulo/catalogo-articulo.component';
 import { CatalogoUsuarioComponent } from './components/configuracion/catalogo-usuario/catalogo-usuario.component';
+import { CrearArticuloComponent } from './components/articulo/crear-articulo/crear-articulo.component';
 
 
 const routes: Routes = [
@@ -20,7 +21,8 @@ const routes: Routes = [
   { path: 'ventas/proveedores', component: CatalogoProveedorComponent},
   { path: 'ventas/facturas', component: CatalogoFacturaComponent},
   { path: 'ventas/movimientoscaja', component: CatalogoMovimientoscajaComponent},
-  { path: 'ventas/articulos', component: CatalogoArticuloComponent},
+  { path: 'inventario/listararticulos', component: CatalogoArticuloComponent},
+  { path: 'inventario/creararticulo', component: CrearArticuloComponent},
   { path: 'configuracion/usuario', component: CatalogoUsuarioComponent}
 
 ];
