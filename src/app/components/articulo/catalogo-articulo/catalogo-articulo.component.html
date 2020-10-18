@@ -18,10 +18,10 @@
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="breadcome-heading">
-                                        <form role="search" class="">
+                                       
                                             <a href=""><i class="fa fa-pencil"></i></a>
                                             <button type="button" (click)="registrararticulos()" class="form-control">Registrar Articulo</button>                                            
-                                        </form>
+                                       
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
@@ -42,7 +42,7 @@
 
 <!-- Static Table Start -->
 <div class="content-inner-all">
-    <div class="data-table-area mg-b-15">
+    <div class="admin-dashone-data-table-area mg-b-15">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12">
@@ -58,14 +58,12 @@
                             </div>
                         </div>
                         <div class="sparkline8-graph">
-                            <div class="breadcome-heading">
-                                <form role="search" class="">
-                                    <input type="text" placeholder="Buscar..." class="form-control">
-                                    <a href=""><i class="fa fa-search"></i></a>
-                                </form>
+                            <div class="breadcome-heading">                            
+                                <input type="text" placeholder="Buscar..." class="form-control">
+                                <a href=""><i class="fa fa-search"></i></a>                            
                             </div>
                             <br>
-                          <div class="static-table-list">
+                          <div class="datatable-dashv1-list custom-datatable-overright">
                               <table class="table">
                                     <thead>
                                         <tr>
@@ -94,10 +92,13 @@
                                                                     
                                             <td>{{articulo.status}}</td>
                                             <td>
-                                              <div class="btn-group project-list-action">
-                                                <button class="btn btn-white btn-active btn-xs"><i class="fa fa-folder"></i> View</button>
-                                                <button class="btn btn-white btn-xs"><i class="fa fa-pencil"></i> Edit</button>
-                                            </div>
+                                                <div class="support-list-img">
+                                                    <a href="#"><img src="assets/img/notification/1.jpg" alt="" />
+                                                    </a>
+                                                    <a href="#"><img src="assets/img/notification/2.jpg" alt="" />
+                                                    </a>
+                                                   
+                                                </div>
                                             </td>
                                         </tr>
                                     </tbody>

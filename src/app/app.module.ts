@@ -25,6 +25,9 @@ import { CatalogoArticuloComponent } from './components/articulo/catalogo-articu
 import { ArticuloService } from './components/articulo/ArticuloService.service';
 import { CatalogoUsuarioComponent } from './components/configuracion/catalogo-usuario/catalogo-usuario.component';
 import { CrearArticuloComponent } from './components/articulo/crear-articulo/crear-articulo.component';
+import { FamiliaService } from './components/familia/FamiliaService.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UnidadService } from './components/unidadmedida/UnidadService.service';
 
 @NgModule({
   declarations: [
@@ -47,9 +50,20 @@ import { CrearArticuloComponent } from './components/articulo/crear-articulo/cre
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [ClienteService,VendedorService,FormaPagoService,ProveedorService,FacturaService,MovimientosCajaService,ArticuloService],
+  providers: [ClienteService,
+              VendedorService,
+              FormaPagoService,
+              ProveedorService,
+              FacturaService,
+              MovimientosCajaService,
+              ArticuloService,
+              FamiliaService,
+              UnidadService],
+              
   bootstrap: [AppComponent]
 })
 export class AppModule { }

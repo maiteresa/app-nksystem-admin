@@ -2753,8 +2753,11 @@ ul.profile-contact-menu {
 	color:#fff;
 }
 .btn-group-xs>.btn, .btn-xs{
-	background:linear-gradient(to bottom, #ff9966 0%, #ff9966 100%);
-	color:#ff9966;
+	background:linear-gradient(to bottom, #ff9966 0%, #d75151 100%);
+	color:#fff;
+}
+.btn-group-xs>.btn:focus, .btn-xs:focus{
+	outline:none;
 }
 
 .btn.focus, .btn:focus, .btn:hover, .btn:active{

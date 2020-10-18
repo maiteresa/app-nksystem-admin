@@ -281,25 +281,25 @@
 			// Notifications Image active class
 			$('#basicDefaultImage').on('click', function () {
                 Lobibox.notify('default', {
-                    img: 'img/notification/1.jpg',
+                    img: 'assets/img/notification/1.jpg',
                     msg: 'Lorem ipsum dolor sit amet against apennine any created, spend loveliest, building stripes.'
                 });
             });
             $('#basicInfoImage').on('click', function () {
                 Lobibox.notify('info', {
-                    img: 'img/notification/1.jpg',
+                    img: 'assets/img/notification/1.jpg',
                     msg: 'Lorem ipsum dolor sit amet against apennine any created, spend loveliest, building stripes.'
                 });
             });
             $('#basicWarningImage').on('click', function () {
                 Lobibox.notify('warning', {
-                    img: 'img/notification/2.jpg',
+                    img: 'assets/img/notification/2.jpg',
                     msg: 'Lorem ipsum dolor sit amet against apennine any created, spend loveliest, building stripes.'
                 });
             });
             $('#basicErrorImage').on('click', function () {
                 Lobibox.notify('error', {
-                    img: 'img/notification/3.jpg',
+                    img: 'assets/img/notification/3.jpg',
                     msg: 'Lorem ipsum dolor sit amet against apennine any created, spend loveliest, building stripes.'
                 });
             });
