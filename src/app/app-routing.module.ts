@@ -11,6 +11,7 @@ import { CatalogoMovimientoscajaComponent } from './components/movimientoscaja/c
 import { CatalogoArticuloComponent } from './components/articulo/catalogo-articulo/catalogo-articulo.component';
 import { CatalogoUsuarioComponent } from './components/configuracion/catalogo-usuario/catalogo-usuario.component';
 import { CrearArticuloComponent } from './components/articulo/crear-articulo/crear-articulo.component';
+import { CrearClienteComponent } from './components/cliente/crear-cliente/crear-cliente.component';
 
 
 const routes: Routes = [
@@ -23,6 +24,7 @@ const routes: Routes = [
   { path: 'ventas/movimientoscaja', component: CatalogoMovimientoscajaComponent},
   { path: 'inventario/listararticulos', component: CatalogoArticuloComponent},
   { path: 'inventario/creararticulo', component: CrearArticuloComponent},
+  { path: 'ventas/crearcliente', component: CrearClienteComponent},
   { path: 'configuracion/usuario', component: CatalogoUsuarioComponent}
 
 ];

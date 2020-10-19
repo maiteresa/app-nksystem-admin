@@ -6,7 +6,7 @@
     </div>
 </div>
 
-<form [formGroup]="formarticulo" (ngSubmit)="guardarArticulo($event)">
+
 <div class="content-inner-all">    
     <!-- Breadcome start-->
     <div class="breadcome-area mg-b-30 small-dn">
@@ -18,7 +18,7 @@
                             <div class="col-lg-6">
                                 <div class="breadcome-heading">
                                     <a href=""><i class="fa fa-pencil"></i></a>
-                                    <button type="submit" class="form-control">Registrar Articulo</button>
+                                    <button type="submit" class="form-control">Guardar</button>
 
                                 </div>
                             </div>
@@ -26,11 +26,10 @@
                                 <ul class="breadcome-menu">
                                     <li>
                                         <a routerLink="/">Inicio</a>
-                                        <span class="bread-slash">/ Inventario /</span>
+                                        <span class="bread-slash">/ Ventas /</span>
                                     </li>
                                     <li>
-                                        <a routerLink="/inventario/listararticulos"><span class="bread-blod">Listado de
-                                                Articulos /</span></a>
+                                        <a routerLink="/inventario/listararticulos"><span class="bread-blod">Clientes /</span></a>
                                     </li>
                                     <li><span class="bread-blod">Crear</span>
                                     </li>
@@ -55,7 +54,7 @@
                         <div class="row">
                             <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
                                 <div class="project-details-title">
-                                    <h2><span class="profile-details-name-nn">Productos/</span> Nuevo</h2>
+                                    <h2><span class="profile-details-name-nn">Clientes/</span> Nuevo</h2>
                                 </div>
 
                             </div>
@@ -68,7 +67,41 @@
                                     <div class="row">
                                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                             <div class="col-lg-4">
-                                                <span><strong>Codigo:</strong></span>
+                                                <span><strong>Tipo Identificación:</strong></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                                            <div class="input-knob-dial-wrap">
+                                                <div class="row">
+                                                    <div class="col-lg-12">
+                                                        <div class="chosen-select-single mg-b-20">
+                                                            <select class="select2_demo_3 form-control">
+                                                                <option>--Seleccione--</option>
+                                                                <option value="Bahamas">NIT-Numero de Identificacion Tributaria</option>
+                                                                <option value="Bahrain">CC-Cedula de Ciudadania</option>
+                                                                <option value="Bangladesh">DIE-Documento de Identificacion Extranjero</option>
+                                                                <option value="Bangladesh">PP-Pasaporte</option>
+                                                                <option value="Bangladesh">CE-Cedula de Extranjeria</option>
+                                                                <option value="Bangladesh">TE-Tarjeta de Extranjeria</option>
+                                                                <option value="Bangladesh">TI-Tarjeta de Identidad</option>
+                                                                <option value="Bangladesh">RC-Registro Civil</option>
+                                                                <option value="Bangladesh">NIT de otro pais</option>
+                                                                <option value="Bangladesh">NUIP-NUIP</option>
+
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="project-details-mg">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                            <div class="col-lg-4">
+                                                <span><strong>Identificación:</strong></span>
                                             </div>
                                         </div>
                                         <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
@@ -78,8 +111,34 @@
                                                     formControlName="codigo" 
                                                     type="text" 
                                                     class="form-control"
-                                                    placeholder="Ingrese el Codigo" />
+                                                    placeholder="Ingrese la identificación" />
                                                 </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="project-details-mg">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                            <div class="col-lg-4">
+                                                <span><strong>Tipo Persona:</strong></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                                            <div class="input-knob-dial-wrap">
+                                                <div class="row">
+                                                    <div class="col-lg-12">
+                                                        <div class="chosen-select-single mg-b-20">
+                                                            <select class="select2_demo_3 form-control">
+                                                                <option>--Seleccione--</option>
+                                                                <option value="Bahamas">Persona Natural</option>
+                                                                <option value="Bahrain">Persona Juridica</option>
+                                                                <option value="Bangladesh">Otro Tipo Obligado</option>
+                                                              
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -109,7 +168,7 @@
                                     <div class="row">
                                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                             <div class="col-lg-4">
-                                                <span><strong>Tipo Producto:</strong></span>
+                                                <span><strong>Responsabilidad Tributaria:</strong></span>
                                             </div>
                                         </div>
                                         <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
@@ -117,13 +176,11 @@
                                                 <div class="row">
                                                     <div class="col-lg-12">
                                                         <div class="chosen-select-single mg-b-20">
-
-                                                            <select class="select2_demo_3 form-control"
-                                                            formControlName="tipoproducto">
-                                                                <option value="0">--Seleccione--</option>
-                                                                <option value="Bahamas">Almacenable</option>
-                                                                <option value="Bahrain">Servicio</option>
-                                                                <option value="Bangladesh">Consumible</option>
+                                                            <select class="select2_demo_3 form-control">
+                                                                <option>--Seleccione--</option>
+                                                                <option value="Bahamas">Responsable del Iva</option>
+                                                                <option value="Bangladesh">No Responsable del Iva</option>
+                                                              
                                                             </select>
                                                         </div>
                                                     </div>
@@ -132,125 +189,12 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="project-details-mg">
-                                    <div class="row">
-                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                            <div class="col-lg-4">
-                                                <span><strong>Unidad Medida:</strong></span>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                                            <div class="input-knob-dial-wrap">
-                                                <div class="row">
-                                                    <div class="col-lg-12">
-                                                        <div class="chosen-select-single mg-b-20">
-                                                            <select class="select2_demo_3 form-control"
-                                                            formControlName="unidadmedida">
-                                                                <option value="0">--Seleccione--</option>
-                                                                <option value="{{unidad.abrevunidadmedida}}" *ngFor="let unidad of lstUnidades">{{unidad.nomunidadmedida}}</option>
-                                                             </select>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="project-details-mg">
-                                    <div class="row">
-                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                            <div class="col-lg-4">
-                                                <span><strong>Impuesto:</strong></span>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                                            <div class="input-knob-dial-wrap">
-                                                <div class="row">
-                                                    <div class="col-lg-12">
-                                                        <div class="chosen-select-single mg-b-20">
-                                                            
-
-                                                            <select class="select2_demo_3 form-control" 
-                                                             formControlName="impuesto">
-                                            
-                                                                <option value="0">--Seleccione--</option>
-                                                                <option value="{{impuesto.idimpuesto}}" *ngFor="let impuesto of lstImpuestos">{{impuesto.tipoimpuesto}} {{impuesto.normal}}%</option>
-
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                    
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                <div class="project-details-mg">
-                                    <div class="row">
-                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                            <div class="col-lg-4">
-                                                <span><strong>Categoria:</strong></span>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                                            <div class="input-knob-dial-wrap">
-                                                <div class="row">
-                                                    <div class="col-lg-12">
-                                                        <div class="chosen-select-single mg-b-20">
-                                                            <select class="select2_demo_3 form-control">
-                                                                <option>--Seleccione--</option>
-                                                                <option value="{{familias.codfamilia}}"
-                                                                    *ngFor="let familias of lstFamilias">
-                                                                    {{familias.nomfamilia}}</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="project-details-mg">
-                                    <div class="row">
-                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                            <div class="col-lg-4">
-                                                <span><strong>Cuenta Contable:</strong></span>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                                            <div class="input-knob-dial-wrap">
-                                                <div class="row">
-                                                    <div class="col-lg-12">
-                                                        <div class="chosen-select-single mg-b-20">
-                                                            <select class="select2_demo_3 form-control">
-                                                                <option>--Seleccione--</option>
-                                                                <option value="Bahamas">Ventas</option>
-
-                                                            </select>
-                                                        </div>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="project-details-mg">
-                                    <div class="row">
-                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                            <div class="col-lg-4">
-                                                <span><strong>Precio Venta:</strong></span>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                                            <div class="project-details-dt">
-                                                <span><input type="email" class="form-control"
-                                                        placeholder="Ingrese Referencia" /></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                               
+               
+                               
                                 <div class="project-details-mg">
                                     <div class="row">
                                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
@@ -275,11 +219,9 @@
                                     <ul class="nav nav-tabs res-pd-less-sm">
                                         <li class="active"><a data-toggle="tab" href="#home">Datos Básicos</a>
                                         </li>
-                                        <li><a data-toggle="tab" href="#menu1">Empaque</a>
+                                        <li><a data-toggle="tab" href="#menu1">Contactos</a>
                                         </li>
-                                        <li><a data-toggle="tab" href="#menu2">Proveedores</a>
-                                        </li>
-
+                                        
                                     </ul>
                                     <div class="tab-content res-tab-content-project">
                                         <div id="home" class="tab-pane fade in active animated zoomInLeft">
@@ -290,13 +232,36 @@
                                                         <div class="row">
                                                             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                                                 <div class="col-lg-4">
-                                                                    <span><strong>Referencia:</strong></span>
+                                                                    <span><strong>Dirección:</strong></span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                                                                <div class="project-details-dt">
+                                                                    <span>
+                                                                        <textarea
+                                                                        formControlName="nombre" 
+                                                                        
+                                                                        class="form-control"
+                                                                        placeholder="Ingrese Dirección">
+                                                                       </textarea>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                    
+
+                                                    <div class="project-details-mg">
+                                                        <div class="row">
+                                                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                                                <div class="col-lg-4">
+                                                                    <span><strong>Teléfono1:</strong></span>
                                                                 </div>
                                                             </div>
                                                             <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
                                                                 <div class="project-details-dt">
                                                                     <span><input type="email" class="form-control"
-                                                                            placeholder="Ingrese Referencia" /></span>
+                                                                            placeholder="Ingrese Telefono 1" /></span>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -306,60 +271,43 @@
                                                         <div class="row">
                                                             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                                                 <div class="col-lg-4">
-                                                                    <span><strong>Serial:</strong></span>
+                                                                    <span><strong>Teléfono2:</strong></span>
                                                                 </div>
                                                             </div>
                                                             <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
                                                                 <div class="project-details-dt">
                                                                     <span><input type="email" class="form-control"
-                                                                            placeholder="Ingrese Serial" /></span>
+                                                                            placeholder="Ingrese Teléfono 2" /></span>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
-
                                                     <div class="project-details-mg">
                                                         <div class="row">
                                                             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                                                 <div class="col-lg-4">
-                                                                    <span><strong>Codigo Barra:</strong></span>
+                                                                    <span><strong>Celular:</strong></span>
                                                                 </div>
                                                             </div>
                                                             <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
                                                                 <div class="project-details-dt">
                                                                     <span><input type="email" class="form-control"
-                                                                            placeholder="Ingrese Codigo de Barra" /></span>
+                                                                            placeholder="Ingrese Celular" /></span>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    
                                                     <div class="project-details-mg">
                                                         <div class="row">
                                                             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                                                 <div class="col-lg-4">
-                                                                    <span><strong>Grupo:</strong></span>
+                                                                    <span><strong>Fax:</strong></span>
                                                                 </div>
                                                             </div>
                                                             <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                                                                <div class="input-knob-dial-wrap">
-                                                                    <div class="row">
-                                                                        <div class="col-lg-12">
-                                                                            <div class="chosen-select-single mg-b-20">
-
-                                                                                <select
-                                                                                    class="select2_demo_3 form-control"
-                                                                                    formControlName="grupoarticulo">
-                                            
-                                                                                    <option value="0">--Seleccione--</option>
-                                                                                    <option value="{{grupoarticulo.codgrupoarticulo}}" *ngFor="let grupoarticulo of lstGrupoArticulos">{{grupoarticulo.nomgrupoarticulo}}</option>
-                                                                                
-                                                               
-                                                                                                                                                                      
-                                                                                </select>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
+                                                                <div class="project-details-dt">
+                                                                    <span><input type="email" class="form-control"
+                                                                            placeholder="Ingrese Fax" /></span>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -368,38 +316,22 @@
                                                         <div class="row">
                                                             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                                                 <div class="col-lg-4">
-                                                                    <span><strong>Marca:</strong></span>
+                                                                    <span><strong>Correo Electrónico:</strong></span>
                                                                 </div>
                                                             </div>
                                                             <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                                                                <div class="input-knob-dial-wrap">
-                                                                    <div class="row">
-                                                                        <div class="col-lg-12">
-                                                                            <div class="chosen-select-single mg-b-20">
-
-                                                                                <select
-                                                                                    class="select2_demo_3 form-control"
-                                                                                    formControlName="marca">
-                                            
-                                                                                        <option value="0">--Seleccione--</option>
-                                                                                        <option value="{{marca.codmarca}}" *ngFor="let marca of lstMarcas">{{marca.nommarca}}</option>
-                                                                                    
-                                                                                    
-                                                                                </select>
-                                                                            </div>
-
-                                                                        </div>
-                                                                    </div>
+                                                                <div class="project-details-dt">
+                                                                    <span><input type="email" class="form-control"
+                                                                            placeholder="Ingrese Correo Electrónico" /></span>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
-
                                                     <div class="project-details-mg">
                                                         <div class="row">
                                                             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                                                 <div class="col-lg-4">
-                                                                    <span><strong>Presentacion:</strong></span>
+                                                                    <span><strong>Vendedor:</strong></span>
                                                                 </div>
                                                             </div>
                                                             <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
@@ -418,15 +350,18 @@
                                                                                         Bahrain</option>
                                                                                     <option value="Bangladesh">
                                                                                         Bangladesh</option>
-                                                                                  
+                                                                                    
                                                                                 </select>
                                                                             </div>
+
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
+
+                                        
                                                 </div>
                                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 
@@ -434,13 +369,104 @@
                                                         <div class="row">
                                                             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                                                 <div class="col-lg-4">
-                                                                    <span><strong>Peso:</strong></span>
+                                                                    <span><strong>Plazo Crédito:</strong></span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                                                                <div class="input-knob-dial-wrap">
+                                                                    <div class="row">
+                                                                        <div class="col-lg-12">
+                                                                            <div class="chosen-select-single mg-b-20">
+
+                                                                                <select
+                                                                                    class="select2_demo_3 form-control">
+                                                                                    <option>--Seleccione--
+                                                                                    </option>
+                                                                                    <option value="Bahamas">
+                                                                                        Bahamas</option>
+                                                                                    <option value="Bahrain">
+                                                                                        Bahrain</option>
+                                                                                    <option value="Bangladesh">
+                                                                                        Bangladesh</option>
+                                                                                    
+                                                                                </select>
+                                                                            </div>
+
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="project-details-mg">
+                                                        <div class="row">
+                                                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                                                <div class="col-lg-4">
+                                                                    <span><strong>Grupo Cliente:</strong></span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                                                                <div class="input-knob-dial-wrap">
+                                                                    <div class="row">
+                                                                        <div class="col-lg-12">
+                                                                            <div class="chosen-select-single mg-b-20">
+
+                                                                                <select
+                                                                                    class="select2_demo_3 form-control">
+                                                                                    <option>--Seleccione--
+                                                                                    </option>
+                                                                                    <option value="Bahamas">
+                                                                                        Bahamas</option>
+                                                                                    <option value="Bahrain">
+                                                                                        Bahrain</option>
+                                                                                    <option value="Bangladesh">
+                                                                                        Bangladesh</option>
+                                                                                    
+                                                                                </select>
+                                                                            </div>
+
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="project-details-mg">
+                                                        <div class="row">
+                                                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                                                <div class="col-lg-4">
+                                                                    <span><strong>Cuenta Contable:</strong></span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                                                                <div class="input-knob-dial-wrap">
+                                                                    <div class="row">
+                                                                        <div class="col-lg-12">
+                                                                            <div class="chosen-select-single mg-b-20">
+                                                                                <select class="select2_demo_3 form-control">
+                                                                                    <option>--Seleccione--</option>
+                                                                                    <option value="Bahamas">Ventas</option>
+                    
+                                                                                </select>
+                                                                            </div>
+                    
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="project-details-mg">
+                                                        <div class="row">
+                                                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                                                <div class="col-lg-4">
+                                                                    <span><strong>Fecha Registro:</strong></span>
                                                                 </div>
                                                             </div>
                                                             <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
                                                                 <div class="project-details-dt">
                                                                     <span><input type="email" class="form-control"
-                                                                            placeholder="Ingrese Referencia" /></span>
+                                                                            placeholder="Ingrese Fecha" /></span>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -452,8 +478,8 @@
                                                                 <div class="i-checks pull-left">
                                                                     <label>
                                                                         <input type="checkbox" value="" checked="">
-                                                                        <i></i> Maneja
-                                                                        Existencia </label>
+                                                                        <i></i> Cliente
+                                                                     </label>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -464,50 +490,13 @@
                                                                     <label>
                                                                         <input type="checkbox" value="" checked="">
                                                                         <i></i>
-                                                                        Compuesto</label>
+                                                                        Proveedor</label>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="row">
-                                                            <div class="col-lg-12">
-                                                                <div class="i-checks pull-left">
-                                                                    <label>
-                                                                        <input type="checkbox" value="" checked="">
-                                                                        <i></i> Maneja
-                                                                        Seriales</label>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-lg-12">
-                                                                <div class="i-checks pull-left">
-                                                                    <label>
-                                                                        <input type="checkbox" value="" checked="">
-                                                                        <i></i>
-                                                                        Facturable</label>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-lg-12">
-                                                                <div class="i-checks pull-left">
-                                                                    <label>
-                                                                        <input type="checkbox" value="" checked="">
-                                                                        <i></i> Usa Empaque
-                                                                    </label>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-lg-12">
-                                                                <div class="i-checks pull-left">
-                                                                    <label>
-                                                                        <input type="checkbox" value="" checked="">
-                                                                        <i></i> Precio X
-                                                                        Empaque</label>
-                                                                </div>
-                                                            </div>
-                                                        </div>
+                                                       
+                                                       
+                                                    
                                                     </div>
                                                 </div>
                                             </div>
@@ -522,8 +511,11 @@
                                                                 <thead>
                                                                     <tr>
                                                                         <th></th>
-                                                                        <th>Unidad</th>
-                                                                        <th>Cantidad</th>
+                                                                        <th>Nombre</th>
+                                                                        <th>Teléfono</th>
+                                                                        <th>Celular</th>
+                                                                        <th>Cargo</th>
+                                                                        <th>Departamento</th>
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody>
@@ -535,10 +527,13 @@
                                                                                         checked=""> <i></i> </label>
                                                                             </div>
                                                                         </td>
-                                                                        <td>Caja</td>
+                                                                        <td></td>
                                                                         <td>
 
                                                                         </td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
 
 
                                                                     </tr>
@@ -887,4 +882,3 @@
         </div>
     </div>
 </div>
-</form>

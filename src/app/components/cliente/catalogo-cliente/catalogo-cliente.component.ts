@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Cliente } from '../../model/Cliente.model';
 import { ClienteService } from '../ClienteService.service';
 
@@ -19,7 +20,7 @@ export class CatalogoClienteComponent implements OnInit {
   tableSize = 10;
   tableSizes = [3, 6, 9, 12];
   
-  constructor(private clienteServicio: ClienteService) { }
+  constructor(private clienteServicio: ClienteService,private router: Router) { }
 
 
   ngOnInit(): void {
@@ -45,5 +46,8 @@ onTableSizeChange(event): void {
   this.page = 1;
   this.lstClientes;
 } 
+registrarclientes() {
+  this.router.navigate(['ventas/crearcliente']);
+    }
 
 }

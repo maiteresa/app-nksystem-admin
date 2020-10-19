@@ -28,6 +28,11 @@ import { CrearArticuloComponent } from './components/articulo/crear-articulo/cre
 import { FamiliaService } from './components/familia/FamiliaService.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UnidadService } from './components/unidadmedida/UnidadService.service';
+import { CrearClienteComponent } from './components/cliente/crear-cliente/crear-cliente.component';
+import { ImpuestoService } from './components/impuesto/ImpuestoService.service';
+import { Marca } from './components/model/Marca.model';
+import { MarcaService } from './components/marca/MarcaService.service';
+import { GrupoArticuloService } from './components/grupoarticulo/GrupoArticuloService.service';
 
 @NgModule({
   declarations: [
@@ -44,7 +49,8 @@ import { UnidadService } from './components/unidadmedida/UnidadService.service';
     CatalogoFacturaComponent,
     CatalogoArticuloComponent,
     CatalogoUsuarioComponent,
-    CrearArticuloComponent
+    CrearArticuloComponent,
+    CrearClienteComponent
   ],
   imports: [
     BrowserModule,
@@ -62,7 +68,10 @@ import { UnidadService } from './components/unidadmedida/UnidadService.service';
               MovimientosCajaService,
               ArticuloService,
               FamiliaService,
-              UnidadService],
+              UnidadService,
+              ImpuestoService,
+              MarcaService,
+              GrupoArticuloService],
               
   bootstrap: [AppComponent]
 })
