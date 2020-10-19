@@ -15,6 +15,12 @@ export class CatalogoVendedorComponent implements OnInit {
   
   constructor(private vendedorService:VendedorService) { }
 
+  POSTS: any;
+  page = 1;
+  count = 0;
+  tableSize = 10;
+  tableSizes = [3, 6, 9, 12];
+  
   ngOnInit(): void {
     this.listarVendedores();
   }
@@ -27,5 +33,17 @@ export class CatalogoVendedorComponent implements OnInit {
      this.loading = false;
    })
  }
+
+ onTableDataChange(event){
+  this.page = event;
+  this.lstVendedores;
+}  
+
+onTableSizeChange(event): void {
+  this.tableSize = event.target.value;
+  this.page = 1;
+  this.lstVendedores;
+} 
+
 
 }

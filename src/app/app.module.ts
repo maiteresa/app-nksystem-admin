@@ -15,6 +15,24 @@ import { FormaPagoService } from './components/formapago/FormaPagoService.servic
 import { MainComponent } from './components/main/main.component';
 import { CatalogoMovimientoscajaComponent } from './components/movimientoscaja/catalogo-movimientoscaja/catalogo-movimientoscaja.component';
 import { CuentasxcobrarComponent } from './components/ventas/cuentasxcobrar/cuentasxcobrar.component';
+import { CatalogoProveedorComponent } from './components/proveedor/catalogo-proveedor/catalogo-proveedor.component';
+import { ProveedorService } from './components/proveedor/ProveedorService.service';
+import { CatalogoFacturaComponent } from './components/factura/catalogo-factura/catalogo-factura.component';
+import { FacturaService } from './components/factura/FacturaService.service';
+import { MovimientosCajaService } from './components/movimientoscaja/MovimientosCajaService.service';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { CatalogoArticuloComponent } from './components/articulo/catalogo-articulo/catalogo-articulo.component';
+import { ArticuloService } from './components/articulo/ArticuloService.service';
+import { CatalogoUsuarioComponent } from './components/configuracion/catalogo-usuario/catalogo-usuario.component';
+import { CrearArticuloComponent } from './components/articulo/crear-articulo/crear-articulo.component';
+import { FamiliaService } from './components/familia/FamiliaService.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UnidadService } from './components/unidadmedida/UnidadService.service';
+import { CrearClienteComponent } from './components/cliente/crear-cliente/crear-cliente.component';
+import { ImpuestoService } from './components/impuesto/ImpuestoService.service';
+import { Marca } from './components/model/Marca.model';
+import { MarcaService } from './components/marca/MarcaService.service';
+import { GrupoArticuloService } from './components/grupoarticulo/GrupoArticuloService.service';
 
 @NgModule({
   declarations: [
@@ -26,14 +44,35 @@ import { CuentasxcobrarComponent } from './components/ventas/cuentasxcobrar/cuen
     CatalogoFormapagoComponent,
     MainComponent,
     CatalogoMovimientoscajaComponent,
-    CuentasxcobrarComponent
+    CuentasxcobrarComponent,
+    CatalogoProveedorComponent,
+    CatalogoFacturaComponent,
+    CatalogoArticuloComponent,
+    CatalogoUsuarioComponent,
+    CrearArticuloComponent,
+    CrearClienteComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxPaginationModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [ClienteService,VendedorService,FormaPagoService],
+  providers: [ClienteService,
+              VendedorService,
+              FormaPagoService,
+              ProveedorService,
+              FacturaService,
+              MovimientosCajaService,
+              ArticuloService,
+              FamiliaService,
+              UnidadService,
+              ImpuestoService,
+              MarcaService,
+              GrupoArticuloService],
+              
   bootstrap: [AppComponent]
 })
 export class AppModule { }

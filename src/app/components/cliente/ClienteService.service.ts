@@ -22,6 +22,6 @@ export class ClienteService{
     const endpoint: any = this.uriapi + 'api/cliente';
     return this.httpClient.get(endpoint, {headers: httpHeaders});
   }
-
+ 
 
 }

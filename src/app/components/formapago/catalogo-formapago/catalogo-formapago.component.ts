@@ -14,6 +14,12 @@ export class CatalogoFormapagoComponent implements OnInit {
   lstFormaPagos: FormaPago[] = [];
   constructor(private formaPagoService: FormaPagoService) { }
 
+  POSTS: any;
+  page = 1;
+  count = 0;
+  tableSize = 10;
+  tableSizes = [3, 6, 9, 12];
+
   ngOnInit(): void {
     this.listarFormaPagos();
   }
@@ -27,5 +33,15 @@ export class CatalogoFormapagoComponent implements OnInit {
      this.loading = false;
    });
  }
+ onTableDataChange(event){
+  this.page = event;
+  this.lstFormaPagos;
+}  
+
+onTableSizeChange(event): void {
+  this.tableSize = event.target.value;
+  this.page = 1;
+  this.lstFormaPagos;
+} 
 
 }
