@@ -33,6 +33,8 @@ import { ImpuestoService } from './components/impuesto/ImpuestoService.service';
 import { Marca } from './components/model/Marca.model';
 import { MarcaService } from './components/marca/MarcaService.service';
 import { GrupoArticuloService } from './components/grupoarticulo/GrupoArticuloService.service';
+import { CatalogoImpuestoComponent } from './components/impuesto/catalogo-impuesto/catalogo-impuesto.component';
+import { CrearImpuestoComponent } from './components/impuesto/crear-impuesto/crear-impuesto.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +52,9 @@ import { GrupoArticuloService } from './components/grupoarticulo/GrupoArticuloSe
     CatalogoArticuloComponent,
     CatalogoUsuarioComponent,
     CrearArticuloComponent,
-    CrearClienteComponent
+    CrearClienteComponent,
+    CatalogoImpuestoComponent,
+    CrearImpuestoComponent
   ],
   imports: [
     BrowserModule,
