@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { Articulo } from '../../model/Articulo.model';
 import { ArticuloService } from '../ArticuloService.service';
 
@@ -13,14 +14,15 @@ export class CatalogoArticuloComponent implements OnInit {
   loading = false;
   titulo = 'Listado de Articulos';
   lstArticulos: Articulo[] = [];
-
+  filtrararticulos='';
   POSTS: any;
   page = 1;
   count = 0;
   tableSize = 10;
   tableSizes = [3, 6, 9, 12];
   constructor(private articuloServicio: ArticuloService,
-              private router: Router) { }
+              private router: Router,
+              private toastr: ToastrService) { }
 
   ngOnInit(): void {
     this.listarArticulos();

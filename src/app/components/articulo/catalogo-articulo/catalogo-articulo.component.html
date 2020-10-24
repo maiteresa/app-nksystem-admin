@@ -58,10 +58,18 @@
                             </div>
                         </div>
                         <div class="sparkline8-graph">
-                            <div class="breadcome-heading">                            
-                                <input type="text" placeholder="Buscar..." class="form-control">
-                                <a href=""><i class="fa fa-search"></i></a>                            
-                            </div>
+                            <form role="search" class="" name="articulolist">
+                                <div class="breadcome-heading">
+                                        <input
+                                        type="text"
+                                        name="filtrararticulos"
+                                        [(ngModel)]="filtrararticulos"
+                                        placeholder="Buscar..."
+                                        class="form-control">
+                                        <a href=""><i class="fa fa-search"></i></a>
+        
+                                </div>
+        
                             <br>
                           <div class="datatable-dashv1-list custom-datatable-overright">
                               <table class="table">
@@ -79,7 +87,7 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr *ngFor="let articulo of lstArticulos | paginate : {
+                                        <tr *ngFor="let articulo of lstArticulos | filterArticulo: filtrararticulos | paginate : {
                                             itemsPerPage: tableSize,
                                             currentPage: page,
                                             totalItems: count
@@ -87,12 +95,21 @@
                                             <td></td>
                                             <td>{{articulo.codigo}}</td>
                                             <td>{{articulo.nomarticulo}}</td>
-                                            <td>{{articulo.familia.nomfamilia}}</td>
+                                            <td>{{articulo.familia.nomfamilia }}</td>
                                             
                                             <td>{{articulo.preciosugerido}}</td>
                                             <td></td>
                                                                     
-                                            <td>{{articulo.status}}</td>
+                                            <td>
+                                                <div *ngIf="articulo.status === 'A'; else inactivo" class="btn-group project-list-add">
+                                                    <button class="btn btn-white btn-xs">Activo  </button>
+                                                </div>
+                                                  <ng-template #inactivo>
+                                                    <div class="btn-group project-list-ad-rd">
+                                                      <button class="btn btn-white btn-xs">Inactivo</button>
+                                                    </div>
+                                                  </ng-template>
+                                            </td>
                                             <td>
                                                 <div class="support-list-img">
                                                     <a href="#"><img src="assets/img/notification/1.jpg" alt="" />
@@ -111,6 +128,7 @@
                                     </pagination-controls>
                                 </div>
                             </div>
+                        </form>
                         </div>
                     </div>
                 </div>

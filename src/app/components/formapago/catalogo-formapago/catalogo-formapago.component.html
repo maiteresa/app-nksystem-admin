@@ -97,7 +97,16 @@
                                             <td>{{formapago.tipo}}</td>
                                             <td>{{formapago.dias}}</td>
                                                                     
-                                            <td>{{formapago.status}}</td>
+                                            <td>
+                                                <div *ngIf="formapago.status === 'ACTIVO'; else inactivo" class="btn-group project-list-add">
+                                                    <button class="btn btn-white btn-xs">Activo  </button>
+                                                  </div>
+                                                  <ng-template #inactivo>
+                                                    <div class="btn-group project-list-ad-rd">
+                                                      <button class="btn btn-white btn-xs">Inactivo</button>
+                                                  </div>
+                                                  </ng-template>
+                                            </td>
                                             <td>
                                               <div class="btn-group project-list-action">
                                                 <button class="btn btn-white btn-active btn-xs"><i class="fa fa-folder"></i> View</button>
