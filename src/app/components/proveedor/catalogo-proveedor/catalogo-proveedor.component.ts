@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 import { Proveedor } from '../../model/Proveedor.model';
 import { ProveedorService } from '../ProveedorService.service';
 
@@ -13,7 +14,8 @@ export class CatalogoProveedorComponent implements OnInit {
   titulo = 'Listado de Proveedores';
   lstProveedores: Proveedor[] = [];
 
-  constructor(private proveedorService:ProveedorService) { }
+  constructor(private proveedorService: ProveedorService,
+              private toastr: ToastrService) { }
 
   POSTS: any;
   page = 1;
@@ -36,13 +38,13 @@ export class CatalogoProveedorComponent implements OnInit {
  onTableDataChange(event){
   this.page = event;
   this.lstProveedores;
-}  
+}
 
 onTableSizeChange(event): void {
   this.tableSize = event.target.value;
   this.page = 1;
   this.lstProveedores;
-} 
+}
 
 
 }
