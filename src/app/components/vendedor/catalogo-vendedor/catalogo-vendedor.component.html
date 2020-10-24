@@ -19,18 +19,23 @@
                             <div class="breadcome-heading">
                                 <form role="search" class="">
                                     <a href=""><i class="fa fa-pencil"></i></a>
-                                    <button class="form-control">Registrar Vendedor</button>                                            
+                                    <button type="button" (click)="registrarvendedor()" class="form-control">Crear Vendedor</button>
                                 </form>
                             </div>
                           </div>
                           <div class="col-lg-6">
-                              <ul class="breadcome-menu">
-                                  <li><a href="#">Home</a> <span class="bread-slash">/</span>
-                                  </li>
-                                  <li><span class="bread-blod">Data Table</span>
-                                  </li>
-                              </ul>
-                          </div>
+                            <ul class="breadcome-menu">
+                                <li>
+                                    <a routerLink="/">Inicio</a>
+                                    <span class="bread-slash">/ Ventas /</span>
+                                </li>
+                                <li>
+                                    <a routerLink="/ventas/vendedores"><span class="bread-blod">Listado de
+                                            Vendedores </span></a>
+                                </li>
+
+                            </ul>
+                        </div>
                       </div>
                   </div>
               </div>
@@ -57,14 +62,18 @@
                           </div>
                       </div>
                       <div class="sparkline13-graph">
+                        <form role="search" class="" name="vendedorlist">
                         <div class="breadcome-heading">
-                            <form role="search" class="">
-                                <input type="text" placeholder="Buscar..." class="form-control">
+                                <input
+                                type="text"
+                                name="filtrarvendedores"
+                                [(ngModel)]="filtrarvendedores"
+                                placeholder="Buscar..."
+                                class="form-control">
                                 <a href=""><i class="fa fa-search"></i></a>
-                            </form>
+
                         </div>
 
-                        
                         <br>
                         <div class="static-table-list">
                           <table class="table">
@@ -75,12 +84,12 @@
                                           <th data-field="name" data-editable="true">Nombre</th>
                                           <th data-field="email" data-editable="true">Correo</th>
                                           <th data-field="phone" data-editable="true">Status</th>
-                                          
+
                                           <th data-field="action">Action</th>
                                       </tr>
                                   </thead>
                                   <tbody>
-                                      <tr *ngFor="let vendedor of lstVendedores| paginate : {
+                                      <tr *ngFor="let vendedor of lstVendedores | filterVendedor: filtrarvendedores | paginate : {
                                         itemsPerPage: tableSize,
                                         currentPage: page,
                                         totalItems: count
@@ -89,13 +98,22 @@
                                           <td>{{vendedor.codigo}}</td>
                                           <td>{{vendedor.nombre}}</td>
                                           <td>{{vendedor.correoe}}</td>
-                                          <td>{{vendedor.status}}</td>
-                                         
-                                         
+                                          <td>
+                                            <div *ngIf="vendedor.status === 'A'; else inactivo" class="btn-group project-list-add">
+                                              <button class="btn btn-white btn-xs">Activo  </button>
+                                            </div>
+                                            <ng-template #inactivo>
+                                              <div class="btn-group project-list-ad-rd">
+                                                <button class="btn btn-white btn-xs">Inactivo</button>
+                                            </div>
+                                            </ng-template>
+                                          </td>
+
+
                                           <td class="datatable-ct"><i class="fa fa-check"></i>
                                           </td>
                                       </tr>
-                                                                      
+
                                     </tbody>
                               </table>
                               <br>
@@ -104,6 +122,7 @@
                                   </pagination-controls>
                               </div>
                           </div>
+                        </form>
                       </div>
                   </div>
               </div>

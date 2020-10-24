@@ -14,6 +14,8 @@ export class CatalogoVendedorComponent implements OnInit {
   titulo = 'Listado de Vendedores';
   lstVendedores: Vendedor[] = [];
 
+  filtrarvendedores = '';
+
   constructor(private vendedorService: VendedorService,
               private toastr: ToastrService) { }
 
@@ -38,6 +40,10 @@ export class CatalogoVendedorComponent implements OnInit {
        this.loading = false;
        this.toastr.error('Opss ocurrio un error' + '<br>' + error.message, 'Error', { enableHtml: true, closeButton: true });
      });
+ }
+
+ registrarvendedor(){
+
  }
 
  onTableDataChange(event){
