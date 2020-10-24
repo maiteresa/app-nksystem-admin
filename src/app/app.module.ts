@@ -1,3 +1,4 @@
+import { FilterVendedorPipe } from './components/vendedor/catalogo-vendedor/filter-vendedor.pipe';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -60,7 +61,8 @@ import { FilterClientePipe } from './components/cliente/catalogo-cliente/filter-
     CrearClienteComponent,
     CatalogoImpuestoComponent,
     CrearImpuestoComponent,
-    FilterClientePipe
+    FilterClientePipe,
+    FilterVendedorPipe
   ],
   imports: [
     BrowserModule,
