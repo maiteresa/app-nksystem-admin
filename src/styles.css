@@ -2747,6 +2747,12 @@ ul.profile-contact-menu {
 	background:linear-gradient(to bottom, #1ab394 0%, #2dda7a 100%);
 	color:#fff;
 }
+
+.project-list-add .btn{
+	background:linear-gradient(to bottom, #ff9966 0%, #d75151 100%);
+	color:#fff;
+}
+
 .project-list-ad .btn:focus{
 	outline:none;
 }
