@@ -37,6 +37,7 @@ import { MarcaService } from './components/marca/MarcaService.service';
 import { GrupoArticuloService } from './components/grupoarticulo/GrupoArticuloService.service';
 import { CatalogoImpuestoComponent } from './components/impuesto/catalogo-impuesto/catalogo-impuesto.component';
 import { CrearImpuestoComponent } from './components/impuesto/crear-impuesto/crear-impuesto.component';
+import { TipoImpuestoService } from './components/impuesto/TipoImpuestoService.service';
 
 
 @NgModule({
@@ -80,6 +81,7 @@ import { CrearImpuestoComponent } from './components/impuesto/crear-impuesto/cre
               UnidadService,
               ImpuestoService,
               MarcaService,
+              TipoImpuestoService,
               GrupoArticuloService],
 
   bootstrap: [AppComponent]
