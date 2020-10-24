@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -36,6 +38,7 @@ import { GrupoArticuloService } from './components/grupoarticulo/GrupoArticuloSe
 import { CatalogoImpuestoComponent } from './components/impuesto/catalogo-impuesto/catalogo-impuesto.component';
 import { CrearImpuestoComponent } from './components/impuesto/crear-impuesto/crear-impuesto.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -62,7 +65,9 @@ import { CrearImpuestoComponent } from './components/impuesto/crear-impuesto/cre
     HttpClientModule,
     NgxPaginationModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot()
   ],
   providers: [ClienteService,
               VendedorService,
@@ -76,7 +81,7 @@ import { CrearImpuestoComponent } from './components/impuesto/crear-impuesto/cre
               ImpuestoService,
               MarcaService,
               GrupoArticuloService],
-              
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }

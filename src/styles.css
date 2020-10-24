@@ -1,3 +1,5 @@
+@import '~ngx-toastr/toastr.css';
+
 /*-----------------------------------------------------------------------------------
 
     Template Name: Adminpro Admin Template
@@ -2763,7 +2765,7 @@ ul.profile-contact-menu {
 .btn.focus, .btn:focus, .btn:hover, .btn:active{
 	color:#ff9966;
 	background:linear-gradient(to bottom, #ff9966 0%, #d75151 100%);
-	
+
 }
 .project-list-ad-bl .btn:focus{
 	outline:none;
