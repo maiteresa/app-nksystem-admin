@@ -13,6 +13,7 @@ import { CatalogoUsuarioComponent } from './components/configuracion/catalogo-us
 import { CrearArticuloComponent } from './components/articulo/crear-articulo/crear-articulo.component';
 import { CrearClienteComponent } from './components/cliente/crear-cliente/crear-cliente.component';
 import { CatalogoImpuestoComponent } from './components/impuesto/catalogo-impuesto/catalogo-impuesto.component';
+import { CrearImpuestoComponent } from './components/impuesto/crear-impuesto/crear-impuesto.component';
 
 
 const routes: Routes = [
@@ -27,7 +28,7 @@ const routes: Routes = [
   { path: 'inventario/creararticulo', component: CrearArticuloComponent},
   { path: 'ventas/crearcliente', component: CrearClienteComponent},
   { path: 'ventas/listarimpuestos', component: CatalogoImpuestoComponent},
-  { path: 'ventas/crearimpuestos', component: CatalogoImpuestoComponent},
+  { path: 'ventas/crearimpuestos', component: CrearImpuestoComponent},
   { path: 'configuracion/usuario', component: CatalogoUsuarioComponent}
 
 ];
