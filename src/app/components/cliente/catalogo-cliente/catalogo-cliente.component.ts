@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { Cliente } from '../../model/Cliente.model';
 import { ClienteService } from '../ClienteService.service';
 
@@ -13,14 +14,14 @@ export class CatalogoClienteComponent implements OnInit {
   loading = false;
   titulo = 'Listado de Clientes';
   lstClientes: Cliente[] = [];
-
+  filtrarclientes='';
   POSTS: any;
   page = 1;
   count = 0;
   tableSize = 10;
   tableSizes = [3, 6, 9, 12];
   
-  constructor(private clienteServicio: ClienteService,private router: Router) { }
+  constructor(private clienteServicio: ClienteService,private router: Router, private toastr: ToastrService) { }
 
 
   ngOnInit(): void {
@@ -34,6 +35,10 @@ export class CatalogoClienteComponent implements OnInit {
      this.lstClientes = response as Cliente[];
      console.log(this.lstClientes);
      this.loading = false;
+   },
+   error => {
+     this.loading=false;
+     this.toastr.error('Opss ocurrio un error' + '<br>' + error.message, 'Error', { enableHtml: true, closeButton: true });
    });
  }
  onTableDataChange(event){

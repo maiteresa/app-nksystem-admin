@@ -38,6 +38,7 @@ import { GrupoArticuloService } from './components/grupoarticulo/GrupoArticuloSe
 import { CatalogoImpuestoComponent } from './components/impuesto/catalogo-impuesto/catalogo-impuesto.component';
 import { CrearImpuestoComponent } from './components/impuesto/crear-impuesto/crear-impuesto.component';
 import { TipoImpuestoService } from './components/impuesto/TipoImpuestoService.service';
+import { FilterClientePipe } from './components/cliente/catalogo-cliente/filter-cliente.pipe';
 
 
 @NgModule({
@@ -58,7 +59,8 @@ import { TipoImpuestoService } from './components/impuesto/TipoImpuestoService.s
     CrearArticuloComponent,
     CrearClienteComponent,
     CatalogoImpuestoComponent,
-    CrearImpuestoComponent
+    CrearImpuestoComponent,
+    FilterClientePipe
   ],
   imports: [
     BrowserModule,
