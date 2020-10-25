@@ -42,7 +42,6 @@ import { FilterClientePipe } from './components/cliente/catalogo-cliente/filter-
 import { FilterVendedorPipe } from './components/vendedor/catalogo-vendedor/filter-vendedor.pipe';
 import { FilterArticuloPipe } from './components/articulo/catalogo-articulo/filter-articulo.pipe';
 
-
 @NgModule({
   declarations: [
     AppComponent,
